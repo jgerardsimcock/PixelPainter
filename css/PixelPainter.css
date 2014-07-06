@@ -19,3 +19,11 @@ table{
   border-radius: 45px;
 
 }
+
+.cell2{
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  border-radius: 5px;
+  border: solid black 1px;
+}
