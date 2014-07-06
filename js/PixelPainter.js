@@ -1,39 +1,49 @@
-function PixelPainter(width, height) {
+function pixelPainter(width, height) {
 
 
-  var cell = $('<div class="cell"></div>'); //this creates divs dynamically in jquery
 
   var artboard = $('#artboard');
   var controls = $('#controls'); //this makes the div with id controls a variable that can later be invoked
-  var td = $('td');
-  var row = $('<tr></tr>');
+  var table = $('<table></table>');
+  var clickedColor;
+  
 
-  for(i=0; i<10; i++){
-  var row1 = $('<td></td>').addClass('bar').text('result ' + i);
-    row.append(row1);
-  }
-for (var j = 0; j < 6; j++){ //this creates/appends divs through a for loop, appending them to 
 
-}
 
+
+  for (i=0; i < width; i++){  //this creates/appends divs through a for loop, appending them to 
+    var row = $('<tr></tr>');
+    table.append(row);
+      for (j=0; j < height; j++) {
+        var column = $('<td class="cell"></td>');
+        row.append(column);
+      };
+  };
+
+  controls.append(table);
+  // artboard.append(table);
+
+
+  td.click(function() { //this catches the color of the clicked tile.
+
+    console.log("click1")
+    clickedColor = $(this).css('background-color');
+    console.log(clickedColor);
+    });
+
+  cell.click(function(){
+      console.log(clickedColor);
+      $(this).css("background-color", clickedColor);
+  });
+
+
+};
   
 $(document).ready(function(){
-  PixelPainter(20,20);
+  pixelPainter(10,10);
 });
 
 
-// var clickedColor;
 
-//   td.click(function() {
 
-//     console.log("click1")
-//     clickedColor = $(this).css('background-color');
-//     console.log(clickedColor);
-//     });
 
-//   cell.click(function(){
-//       console.log(clickedColor);
-//       $(this).css("background-color", clickedColor);
-//   });
-
-// };
