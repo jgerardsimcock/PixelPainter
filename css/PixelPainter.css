@@ -5,25 +5,45 @@ table{
 
 
 #artboard{
- margin-left: 250px;
- margin-top: 50px;
+ margin-top: 10px;
 
 }
 
 
-.cell {
-  height: 40px;
-  width: 40px;
+.grid-cell {
+  height: 20px;
+  width: 20px;
   border: solid black 1px;
   display: inline-block;
   border-radius: 45px;
 
+
 }
 
-.cell2{
-  height: 20px;
-  width: 20px;
+.palette-cell{
+  height: 10px;
+  width: 10px;
   display: inline-block;
   border-radius: 5px;
   border: solid black 1px;
+}
+
+button {
+  font-style: Verdana;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  height: 30px;
+  width: 100px;
+  border-radius: 5px;
+  display: block;
+  margin: 10px;
+}
+
+
+
+#controls{
+  display: inline-block;
+
+
+
 }
